@@ -1,5 +1,6 @@
 body {
-  background: #fff;
+  background-image: url(bg-01.jpg);
+
   color: #444;
 }
 .targets,.dates,.transactions,.shoes,.segments,.startTimes,.endTimes,.checkboxs{
