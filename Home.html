@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>PLAY BOOK</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="jquery-3.4.1.slim.js"></script>
     <script type="text/javascript" src="jspdf.min.js"></script>
     <script type="text/javascript" src="scripts.js"> </script>
@@ -10,6 +16,7 @@
   <body>
 
     <h1>PLAY BOOK</h1>
+  <div class="table-responsive">
   <table class="table">
     <tr>
       <th>Day</th>
@@ -25,22 +32,22 @@
 
 
   <tbody>
-    <tr>
-      <td>Sunday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    <tr id="Sunday">
+      <td class="days" id="Sunday">Sunday</td>
+      <td >
+        <input type="date" class="dates" id="Sunday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Sunday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Sunday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Sunday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Sunday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -49,32 +56,32 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Sunday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Sunday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Sunday">
+        <input type="checkbox" class="checkboxs" id="Sunday" name="checkbox">
       </td>
     </tr>
-    <tr>
-      <td>Monday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    <tr id="Monday">
+      <td class="days" id="Monday">Monday</td>
+      <td >
+        <input type="date" class="dates" id="Monday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Monday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Monday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Monday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Monday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -83,32 +90,32 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Monday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Monday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Monday">
+        <input type="checkbox" class="checkboxs" id="Monday" name="checkbox">
       </td>
     </tr>
-    <tr>
-      <td>Tuesday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    <tr id="Tuesday">
+      <td class="days" id="Tuesday">Tuesday</td>
+      <td >
+        <input type="date" class="dates" id="Tuesday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Tuesday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Tuesday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Tuesday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Tuesday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -117,32 +124,32 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Tuesday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Tuesday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Tuesday">
+        <input type="checkbox" class="checkboxs" id="Tuesday" name="checkbox">
       </td>
     </tr>
-    <tr>
-      <td>Wednesday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    <tr id="Wednesday">
+      <td class="days" id="Wednesday">Wednesday</td>
+      <td >
+        <input type="date" class="dates" id="Wednesday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Wednesday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Wednesday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Wednesday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Wednesday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -151,32 +158,31 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Wednesday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Wednesday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Wednesday">
+        <input type="checkbox" class="checkboxs" id="Wednesday" name="checkbox">
       </td>
-    </tr>
-    <tr>
-      <td>Thursday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    </tr><tr id="Thursday">
+      <td class="days" id="Thursday">Thursday</td>
+      <td >
+        <input type="date" class="dates" id="Thursday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Thursday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Thursday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Thursday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Thursday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -185,32 +191,31 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Thursday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Thursday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Thursday">
+        <input type="checkbox" class="checkboxs" id="Thursday" name="checkbox">
       </td>
-    </tr>
-    <tr>
-      <td>Friday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    </tr><tr id="Friday">
+      <td class="days" id="Friday">Friday</td>
+      <td >
+        <input type="date" class="dates" id="Friday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Friday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Friday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Friday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Friday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -219,32 +224,31 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Friday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Friday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Friday">
+        <input type="checkbox" class="checkboxs" id="Friday" name="checkbox">
       </td>
-    </tr>
-    <tr>
-      <td>Saturday</td>
-      <td>
-        <input type="date" m min="2019-01-01" Name="IncidentDate" required/>
+    </tr><tr id="Saturday">
+      <td class="days" id="Saturday">Saturday</td>
+      <td >
+        <input type="date" class="dates" id="Saturday" m min="2019-01-01" autofocus Name="Date" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Todays Target" required/>
+      <td >
+        <input type="number" class="targets" id="Saturday" autofocus placeholder="Todays Target" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Transactions" required/>
+      <td >
+        <input type="number" class="transactions" id="Saturday" autofocus placeholder="Transactions" required/>
       </td>
-      <td>
-        <input type="number" id="input-first" autofocus placeholder="Shoe Care" required/>
+      <td >
+        <input type="number" class="shoes" id="Saturday" autofocus placeholder="Shoe Care" required/>
       </td>
-      <td>
-        <select id="input">
+      <td >
+        <select class="segments" id="Saturday">
           <option value="0"></option>
           <option value="1">2,3,3</option>
           <option value="2">3,3,3</option>
@@ -253,18 +257,19 @@
           <option value="5">3,3,3,3</option>
         </select>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="startTimes" id="Saturday" name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+      <td >
+        <input type="time" class="endTimes" id="Saturday"  name="appt" min="00:00" max="24:00" required>
       </td>
-      <td>
-        <input type="checkbox" name="checkbox">
+      <td class="checkboxs" id="Saturday">
+        <input type="checkbox" class="checkboxs" id="Saturday" name="checkbox">
       </td>
     </tr>
   </tbody>
 </table>
+</div>
 <div class="form-box">
     <button id="button-cancel">Cancel</button>
     <button id="button-send">Send</button>

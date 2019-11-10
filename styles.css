@@ -1,0 +1,18 @@
+body {
+  background: #fff;
+  color: #444;
+}
+.targets,.dates,.transactions,.shoes,.segments,.startTimes,.endTimes,.checkboxs{
+  background: #fff;
+  text-align: center;
+
+  width:auto;
+  outline: none;
+  border-radius: 14px;
+  transition: 0.25s;
+
+}
+.targets:hover,.dates:hover,.transactions:hover,.shoes:hover,.segments:hover,.startTimes:hover,.endTimes:hover{
+
+border-color: black;
+}
