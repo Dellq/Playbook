@@ -15,9 +15,11 @@ function check() {
     if (checkboxes[i].checked){
       var day = [];
       var name = checkboxes[i].id;
-      for(var j=1; j<classList.length; j++){
-        day[0]=name;
-        day[j]= document.getElementById(name.concat(classList[j])).value;
+      day[0]=name;
+      for(var j=0; j<classList.length; j++){
+
+        day[j+1]= document.getElementById(name.concat(classList[j])).value;
+        //alert(day);
       }
 
       //alert(name.concat('Target'));
@@ -26,7 +28,7 @@ function check() {
 
    //checkboxes[i].checked = source.checked;
  }
- alert(days);
+alert(days.length);
  return days;
 }
 var classList = new Array();
