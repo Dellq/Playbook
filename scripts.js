@@ -31,7 +31,7 @@ function check() {
 alert(days.length);
  return days;
 }
-var classList = new Array();
+var classList = [];
 classList["0"] = 'Date';
 classList["1"] = 'Target';
 classList["2"] = 'Transactions';
@@ -40,14 +40,14 @@ classList["4"] = 'Segments';
 classList["5"] = 'ST';
 classList["6"] = 'ET';
 // array for the segmants ti be used for the timce calculations
-var segments_val = new Array();
+var segments_val = [];
 segments_val["0"]='2,3,3';
 segments_val["1"]='3,3,3';
 segments_val["2"]='2,3,3,3';
 segments_val["3"]='2,2,2,2';
 segments_val["4"]='3,3,3,3';
 // array for the segmants to calculate percentages
-var segments_percent = new Array();
+var segments_percent = [];
 segments_percent["0"]='18,44,38';
 segments_percent["1"]='20,42,38';
 segments_percent["2"]='18,33,33,16';

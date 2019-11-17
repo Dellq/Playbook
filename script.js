@@ -15,19 +15,101 @@ $(document).on('click', '#B', function() {
       var days = check();
       var day = days[0];
       alert(day);
-      var name = day[0];
-      var date = day[1];
-      alert(date);
+
+      var fullDay = {
+        name:'',
+        date:'',
+        target:'',
+        transactions:'',
+        shoeCare:'',
+        segment:'',
+        st:'',
+        et:''
+      };
+
+      for(var i=0; i<day.length; i++){
+        fullDay.name = day[0];
+        fullDay.date = day[1];
+        fullDay.target = day[2];
+        fullDay.transactions = day[3];
+        fullDay.shoeCare = day[4];
+        fullDay.segment = day[5];
+        fullDay.st = day[6];
+        fullDay.et = day[7];
+      }
+
+      //alert(fullDay);
       //var company = $('#company').val();
       //var department = $('#department').val();
       //var title = $('#title').val();
       //alert("My First Jquery Test");
       //doc.setFontSize(26);
       //doc.setTextColor(92, 76, 76);
+
+      //top part
       doc.setFontSize(16);
-      doc.text(210, 10, name);
+      doc.text(210, 10, fullDay.name);
       doc.setFontSize(11);
-      doc.text(255, 18, date);
+      doc.text(255, 18.5, fullDay.date);
+
+      //today's targets
+      doc.setFontSize(16);
+      doc.text(232, 36, fullDay.target);
+      // chacnge to CONV.
+      doc.text(232, 43, fullDay.target);
+      // change to SLR
+      doc.text(232, 50, fullDay.target);
+
+      //segments endTimes
+      doc.setFontSize(11);
+      // edit this to take the times
+      // 1st segment
+      doc.text(60, 57, ((fullDay.st)+' - '+(fullDay.et)));
+      // 2nd segment
+      doc.text(106, 57, fullDay.target);
+      // 3rd segment
+      doc.text(152, 57, fullDay.target);
+      // 4th segment
+      doc.text(201, 57, );
+      // closing segment
+      doc.text(249, 57, 'CLOSING');
+      // segments
+      doc.setFontSize(11);
+      // 1st segment
+      doc.text(50, 70.5, fullDay.target);
+      doc.text(50, 75.5, fullDay.target);
+      doc.text(50, 80.5, fullDay.target);
+      doc.text(50, 85.5, fullDay.target);
+      doc.text(50, 90.5, fullDay.target);
+      doc.text(50, 95.5, fullDay.target);
+      // 2nd segment
+      doc.text(96, 70.5, fullDay.target);
+      doc.text(96, 75.5, fullDay.target);
+      doc.text(96, 80.5, fullDay.target);
+      doc.text(96, 85.5, fullDay.target);
+      doc.text(96, 90.5, fullDay.target);
+      doc.text(96, 95.5, fullDay.target);
+      // 3rd segment
+      doc.text(142, 70.5, fullDay.target);
+      doc.text(142, 75.5, fullDay.target);
+      doc.text(142, 80.5, fullDay.target);
+      doc.text(142, 85.5, fullDay.target);
+      doc.text(142, 90.5, fullDay.target);
+      doc.text(142, 95.5, fullDay.target);
+      // 4th segment
+      doc.text(191, 70.5, fullDay.target);
+      doc.text(191, 75.5, fullDay.target);
+      doc.text(191, 80.5, fullDay.target);
+      doc.text(191, 85.5, fullDay.target);
+      doc.text(191, 90.5, fullDay.target);
+      doc.text(191, 95.5, fullDay.target);
+      // closing segment
+      doc.text(237, 70.5, fullDay.target);
+      doc.text(237, 75.5, fullDay.target);
+      doc.text(237, 80.5, fullDay.target);
+      doc.text(237, 85.5, fullDay.target);
+      doc.text(237, 90.5, fullDay.target);
+      doc.text(237, 95.5, fullDay.target);
       //doc.text(139.2, 162, department);
       //doc.text(139.2, 202, title);
       //  doc.text('Hello world!', 139.2, 107.95)
