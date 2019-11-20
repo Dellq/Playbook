@@ -53,63 +53,67 @@ $(document).on('click', '#B', function() {
       doc.text(255, 18.5, fullDay.date);
 
       //today's targets
+      var tc = document.getElementById('TC').value;
+      var lc = document.getElementById('LC').value;
       doc.setFontSize(16);
       doc.text(232, 36, fullDay.target);
       // chacnge to CONV.
-      doc.text(232, 43, fullDay.target);
+      doc.text(232, 43, tc);
       // change to SLR
-      doc.text(232, 50, fullDay.target);
+      doc.text(232, 50, lc);
 
-      //segments endTimes
-      doc.setFontSize(11);
-      // edit this to take the times
-      // 1st segment
-      doc.text(60, 57, ((fullDay.st)+' - '+(fullDay.et)));
-      // 2nd segment
-      doc.text(106, 57, fullDay.target);
-      // 3rd segment
-      doc.text(152, 57, fullDay.target);
-      // 4th segment
-      doc.text(201, 57, );
-      // closing segment
-      doc.text(249, 57, 'CLOSING');
+
       // segments
       doc.setFontSize(11);
+      var t = seg_time(fullDay.st, fullDay.segment,'1');
+      var bud = budget(fullDay.target, fullDay.segment,'0');
+      var trans = budget(fullDay.transactions, fullDay.segment,'0');
+      var shoeC = budget(fullDay.shoeCare, fullDay.segment,'0');
       // 1st segment
-      doc.text(50, 70.5, fullDay.target);
-      doc.text(50, 75.5, fullDay.target);
-      doc.text(50, 80.5, fullDay.target);
-      doc.text(50, 85.5, fullDay.target);
-      doc.text(50, 90.5, fullDay.target);
-      doc.text(50, 95.5, fullDay.target);
+      //Time
+      doc.text(60, 57, (t[0][0])+' - '+(t[0][1]));
+      //budget
+      doc.text(50, 70.5, bud[0]);
+      //doc.text(50, 75.5, fullDay.target);
+      doc.text(50, 80.5, trans[0]);
+      doc.text(50, 85.5, tc);
+      doc.text(50, 90.5, lc);
+      doc.text(50, 95.5, shoeC[0]);
       // 2nd segment
-      doc.text(96, 70.5, fullDay.target);
-      doc.text(96, 75.5, fullDay.target);
-      doc.text(96, 80.5, fullDay.target);
-      doc.text(96, 85.5, fullDay.target);
-      doc.text(96, 90.5, fullDay.target);
-      doc.text(96, 95.5, fullDay.target);
+      doc.text(106, 57, (t[1][0])+' - '+(t[1][1]));
+      doc.text(96, 70.5, bud[1]);
+      //doc.text(96, 75.5, fullDay.target);
+      doc.text(96, 80.5, trans[1]);
+      doc.text(96, 85.5, tc);
+      doc.text(96, 90.5, lc);
+      doc.text(96, 95.5, shoeC[1]);
       // 3rd segment
-      doc.text(142, 70.5, fullDay.target);
-      doc.text(142, 75.5, fullDay.target);
-      doc.text(142, 80.5, fullDay.target);
-      doc.text(142, 85.5, fullDay.target);
-      doc.text(142, 90.5, fullDay.target);
-      doc.text(142, 95.5, fullDay.target);
+      doc.text(152, 57, (t[2][0])+' - '+(t[2][1]));
+      doc.text(142, 70.5, bud[2]);
+      //doc.text(142, 75.5, fullDay.target);
+      doc.text(142, 80.5, trans[2]);
+      doc.text(142, 85.5, tc);
+      doc.text(142, 90.5, lc);
+      doc.text(142, 95.5, shoeC[2]);
       // 4th segment
-      doc.text(191, 70.5, fullDay.target);
-      doc.text(191, 75.5, fullDay.target);
-      doc.text(191, 80.5, fullDay.target);
-      doc.text(191, 85.5, fullDay.target);
-      doc.text(191, 90.5, fullDay.target);
-      doc.text(191, 95.5, fullDay.target);
+      if(t.length>3){
+        // 4th segment
+        doc.text(201, 57, (t[3][0])+' - '+(t[3][1]));
+        doc.text(191, 70.5, bud[3]);
+        //doc.text(191, 75.5, fullDay.target);
+        doc.text(191, 80.5, trans[3]);
+        doc.text(191, 85.5, tc);
+        doc.text(191, 90.5, lc);
+        doc.text(191, 95.5, shoeC[3]);
+      }
       // closing segment
+      doc.text(249, 57, 'CLOSING');
       doc.text(237, 70.5, fullDay.target);
-      doc.text(237, 75.5, fullDay.target);
-      doc.text(237, 80.5, fullDay.target);
-      doc.text(237, 85.5, fullDay.target);
-      doc.text(237, 90.5, fullDay.target);
-      doc.text(237, 95.5, fullDay.target);
+      //doc.text(237, 75.5, fullDay.target);
+      doc.text(237, 80.5, fullDay.transactions);
+      doc.text(237, 85.5, tc);
+      doc.text(237, 90.5, lc);
+      doc.text(237, 95.5, fullDay.shoeCare);
       //doc.text(139.2, 162, department);
       //doc.text(139.2, 202, title);
       //  doc.text('Hello world!', 139.2, 107.95)

@@ -31,6 +31,7 @@ function check() {
 alert(days.length);
  return days;
 }
+// to build the names to get the elements
 var classList = [];
 classList["0"] = 'Date';
 classList["1"] = 'Target';
@@ -59,28 +60,57 @@ segments_percent["4"]='20,31,31,18';
 function getSegmentVal(val,flag){
 
   var segVal = '';
-  var segId = document.getElementById(val);
+  var segId = val;
 
   if(flag == 0){
-    segVal = segments_percent[segId.value];
+    segVal = segments_percent[segId];
   }else if (flag == 1){
-    segVal = segments_val[segId.value];
+    segVal = segments_val[segId];
   }
 
   return segVal;
 }
 
-function budget(dayBudget, segments){
-  var seg = getSegmentVal(segments,'0').split(',');
-  var target = document.getElementById(dayBudget).value;
-  var i;
+function budget(dayBudget, segments,flag){
+  var seg = getSegmentVal(segments,flag).split(',');
+  //var target = document.getElementById(dayBudget).value;
+  var target = dayBudget;
+
   var bud = [];
-  for(i = 0; i<seg.length; i++){
-    bud[i]= Math.round((seg[i]*target)/100);
+  for(var i = 0; i<seg.length; i++){
+    var n = Math.round((seg[i]*target)/100);
+    bud[i]= n.toString();
   }
   alert(bud);
   alert(target);
   // array of the calculated bugets for every segment
   // by the defult %
   return bud;
+}
+function seg_time(startTime, segments,flag){
+
+  var sTimes = [];
+  var t = startTime;
+  var temp = 0;
+  var newT = '';
+  var seg = getSegmentVal(segments,flag).split(',');
+  for(var i = 0; i<seg.length; i++){
+    var times =[];
+
+    if (i ==0){
+      newT = t;
+    }
+    temp = +temp + +seg[i];
+    times[0] = newT;
+    times[1] = moment(t,"HH:mm").add(temp,'hours').format("HH:mm");
+    newT = times[1];
+    //alert(times);
+
+    sTimes[i]=times;
+  }
+  alert(t);
+  alert(temp);
+  alert(sTimes);
+  return sTimes;
+
 }
