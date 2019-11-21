@@ -5,12 +5,27 @@ function toggle(source) {
    checkboxes[i].checked = source.checked;
  }
 }
+//var checkbox = document.querySelector("input[name=checkbox]");
+function toggleRequired() {
+
+    if (textInput.hasAttribute('required') !== true) {
+        textInput.setAttribute('required','required');
+    }
+
+    else {
+        textInput.removeAttribute('required');
+    }
+}
+
+//checkbox.addEventListener('change',toggleRequired,false);
+
 // check the check boxes and return the IDs
 // return an array with all the days selected and there data
 function check() {
   checkboxes = document.getElementsByName('checkbox');
 
   var days = [];
+  var count = 0;
   for(var i=0, n=checkboxes.length;i<n;i++) {
     if (checkboxes[i].checked){
       var day = [];
@@ -23,12 +38,13 @@ function check() {
       }
 
       //alert(name.concat('Target'));
-      days[i]=day;
+      days[count]=day;
+      count ++;
     }
 
    //checkboxes[i].checked = source.checked;
  }
-alert(days.length);
+//alert(days.length);
  return days;
 }
 // to build the names to get the elements
@@ -81,8 +97,8 @@ function budget(dayBudget, segments,flag){
     var n = Math.round((seg[i]*target)/100);
     bud[i]= n.toString();
   }
-  alert(bud);
-  alert(target);
+  //alert(bud);
+  //alert(target);
   // array of the calculated bugets for every segment
   // by the defult %
   return bud;
@@ -108,9 +124,9 @@ function seg_time(startTime, segments,flag){
 
     sTimes[i]=times;
   }
-  alert(t);
-  alert(temp);
-  alert(sTimes);
+  //alert(t);
+  //alert(temp);
+  //alert(sTimes);
   return sTimes;
 
 }
