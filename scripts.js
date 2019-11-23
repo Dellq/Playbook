@@ -103,7 +103,7 @@ function budget(dayBudget, segments,flag){
   // by the defult %
   return bud;
 }
-function seg_time(startTime, segments,flag){
+function seg_time(startTime,endTime, segments,flag){
 
   var sTimes = [];
   var t = startTime;
@@ -118,7 +118,11 @@ function seg_time(startTime, segments,flag){
     }
     temp = +temp + +seg[i];
     times[0] = newT;
-    times[1] = moment(t,"HH:mm").add(temp,'hours').format("HH:mm");
+    if (i == (seg.length-1)){
+      times[1] = endTime;
+    }else{
+      times[1] = moment(t,"HH:mm").add(temp,'hours').format("HH:mm");
+    }
     newT = times[1];
     //alert(times);
 
