@@ -62,7 +62,8 @@ segments_val["0"]='2,3,3';
 segments_val["1"]='3,3,3';
 segments_val["2"]='2,3,3,3';
 segments_val["3"]='2,2,2,2';
-segments_val["4"]='3,3,3,3';
+segments_val["4"]='2.5,3,3,3';
+segments_val["5"]='4,3,3,3';
 // array for the segmants to calculate percentages
 var segments_percent = [];
 segments_percent["0"]='18,44,38';
@@ -70,6 +71,7 @@ segments_percent["1"]='20,42,38';
 segments_percent["2"]='18,33,33,16';
 segments_percent["3"]='18,33,31,18';
 segments_percent["4"]='20,31,31,18';
+segments_percent["5"]='20,30,30,20';
 // a function to get the values of the segments
 // val is the drop list's Id
 // flag is for % or values if zero % if 1 values
